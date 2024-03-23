@@ -1,10 +1,18 @@
 import { Image, Pressable, StyleSheet } from 'react-native'
 import React from 'react'
-import { Text, View } from '@/components/Themed';
 import { Link } from 'expo-router';
 
+export interface results {
+    id: number,
+    poster_path?: string
+}
 
-const MovieListItem = ({ movie }) => {
+export interface MoviesProps{
+    movie: results
+}
+
+
+const MovieListItem = ({ movie } : MoviesProps) => {
     return (
         <Link href={`/${movie.id}`} asChild>
 
@@ -18,7 +26,6 @@ const MovieListItem = ({ movie }) => {
 
                     }}
                 />
-                {/* <Text>{movie.title}</Text> */}
             </Pressable>
         </Link>
     )

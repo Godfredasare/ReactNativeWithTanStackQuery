@@ -1,13 +1,7 @@
+import { MoviesProps } from "../interfaces/movies";
 
-// const options = {
-//     method: 'GET',
-//     headers: {
-//         accept: 'application/json',
-//         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxY2MxZGQ1YjNkNzViNTVmNGRiMzU5OWJhYWNkNDNhZCIsInN1YiI6IjYxZmZhYTMxMWZkMzZmMjI0YTEyMzBkZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JJlV0CpnaHI9v_dfHQ7gkEKmfOyglq_18pf5qUHkxvc'
-//     }
-// }
 
-export const fetcRatedMovies = async ({pageParam }) => {
+export const fetcRatedMovies = async ({pageParam}: {pageParam: number}) => {
     const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${pageParam }`;
     const options = {
         method: 'GET',
