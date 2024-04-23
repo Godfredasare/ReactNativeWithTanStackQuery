@@ -7,12 +7,12 @@ export interface results {
     poster_path?: string
 }
 
-export interface MoviesProps{
+export interface MoviesProps {
     movie: results
 }
 
 
-const MovieListItem = ({ movie } : MoviesProps) => {
+const MovieListItem = ({ movie }: MoviesProps) => {
     return (
         <Link href={`/${movie.id}`} asChild>
 

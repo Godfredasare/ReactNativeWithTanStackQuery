@@ -14,5 +14,3 @@ export interface MoviesDetailsProps {
     backdrop_path: string;
     overview: string;
 }
-
-

@@ -7,15 +7,15 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { fetchMoviesDetails } from './service/movies-api'
 import { FontAwesome } from '@expo/vector-icons';
 import { addToWatchList } from './service/watchList-api';
-import {  MoviesDetailsProps } from './interfaces/movies';
+import { MoviesDetailsProps } from './interfaces/movies';
 
 
 const MoviesDetails = () => {
   const { id } = useLocalSearchParams()
   const movieId = Number(id)
-  
+
   const client = useQueryClient()
-  
+
   const { data, error, isLoading } = useQuery<MoviesDetailsProps>({
     queryKey: ['movies', id],
     queryFn: () => fetchMoviesDetails(movieId)
